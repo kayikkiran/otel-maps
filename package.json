@@ -1,0 +1,30 @@
+{
+  "name": "hotel-indoor-navigator",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "editor": "vite --open /editor.html",
+    "survey": "vite --open /survey.html",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -b --noEmit",
+    "build:venue": "esbuild scripts/build-venue.ts --bundle --platform=node --format=esm --outfile=scripts/.build-venue.mjs --log-level=error && node scripts/.build-venue.mjs",
+    "test:route": "esbuild scripts/route-smoke.ts --bundle --platform=node --format=esm --outfile=scripts/.route-smoke.mjs --log-level=error && node scripts/.route-smoke.mjs"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.12",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7"
+  }
+}

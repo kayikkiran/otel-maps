@@ -1,0 +1,7 @@
+node_modules/
+dist/
+tsconfig.tsbuildinfo
+scripts/.route-smoke.mjs
+*.local
+.DS_Store
+scripts/.build-venue.mjs
